@@ -53,6 +53,7 @@ function htmlmail_update_7200() {
  * Rename HTMLMailMailSystem to HTMLMailSystem.
  */
 function htmlmail_update_7201() {
+  module_load_include('module', 'mailsystem');
   foreach (mailsystem_get() as $name => $value) {
     if ($value == 'HTMLMailMailSystem') {
       mailsystem_set(array($name => 'HTMLMailSystem'));

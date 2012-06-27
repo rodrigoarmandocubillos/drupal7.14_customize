@@ -46,7 +46,7 @@ class HTMLMailSystem implements MailSystemInterface {
     }
     else {
       if (is_array($message['body'])) {
-        $message['body'] = implode("$eol$eol", $message['body']);
+        $message['body'] = implode("<br />$eol<br />$eol", $message['body']);
       }
       $body = theme('htmlmail', $message);
       if ($message['body'] && !$body) {

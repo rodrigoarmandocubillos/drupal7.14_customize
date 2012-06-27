@@ -15,7 +15,7 @@ function htmlmail_admin_settings() {
   }
   $form['template'] = array(
     '#type' => 'fieldset',
-    '#title' => '<h3>' . t('Step 1') . '</h3>',
+    '#title' => t('Step 1'),
     '#collapsible' => FALSE,
   );
   $form['template']['htmlmail_template'] = array(
@@ -141,7 +141,7 @@ function htmlmail_admin_settings() {
   );
   $form['theme'] = array(
     '#type' => 'fieldset',
-    '#title' => '<h3>' . t('Step 2') . '</h3>',
+    '#title' => t('Step 2'),
     '#collapsible' => FALSE,
   );
   $form['theme']['htmlmail_theme'] = array(
@@ -159,7 +159,11 @@ function htmlmail_admin_settings() {
           '!theme_system' => 'http://drupal.org/documentation/theme',
         )
       ) :
-      t('If you install and enable the <a href="!echo">Echo</a> module, the theme you select will also be used to style your messages as if they were pages on your website.')
+      t('If you install and enable the <a href="!echo">Echo</a> module, the theme you select will also be used to style your messages as if they were pages on your website.',
+        array(
+          '!echo' => 'http://drupal.org/project/echo'
+        )
+      )
     )
     . '</p><p>'
     . (module_exists('mailmime') ?
@@ -177,7 +181,7 @@ function htmlmail_admin_settings() {
   );
   $form['filter'] = array(
     '#type' => 'fieldset',
-    '#title' => '<h3>' . t('Step 3') . '</h3>',
+    '#title' => t('Step 3'),
     '#collapsible' => FALSE,
   );
   $form['filter']['htmlmail_postfilter'] = array(
