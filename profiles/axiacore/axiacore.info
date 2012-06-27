@@ -29,6 +29,8 @@ dependencies[] = imce
 dependencies[] = imce_wysiwyg
 dependencies[] = wysiwyg
 dependencies[] = xmlsitemap
+dependencies[] = mailsystem
+
 dependencies[] = htmlmail 
 
 ; Information added by drupal.org packaging script on 2012-05-02
